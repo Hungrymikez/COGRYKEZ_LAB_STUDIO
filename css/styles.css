@@ -289,6 +289,7 @@
             padding: 2rem;
             text-align: center;
         }
+        
 
         .dark-mode .project-overlay {
             background: linear-gradient(180deg, rgba(212, 175, 55, 0.7) 0%, rgba(212, 175, 55, 0.9) 100%);
@@ -302,6 +303,11 @@
             color: white;
             margin-bottom: 1rem;
             font-size: 1.3rem;
+        }
+        .project-overlay p {
+            color: #fafafa;
+            margin-bottom: 0.8rem;
+            font-size: 0.8rem;
         }
 
         .dark-mode .project-overlay h4 {

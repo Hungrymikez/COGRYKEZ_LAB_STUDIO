@@ -174,15 +174,21 @@
                 link: "https://hungrymikez.github.io/parqueadero_codema/"
             },
             2: {
-                title: "Analytics Dashboard",
-                description: "Panel de control analítico con visualizaciones interactivas, métricas en tiempo real y reportes personalizables. Permite a los usuarios tomar decisiones basadas en datos con facilidad.",
-                technologies: ["Vue.js", "Express", "PostgreSQL", "Chart.js", "Socket.io"],
+                title: "Gestor de archivos por proyecto, versión BETA",
+                description: "Gestor de Archivos por Proyecto: aplicación web para administrar versiones de archivos Excel con metadatos, búsqueda avanzada y control de modificaciones por proyecto",
+                technologies: ["Html5", "Css", "Bootstrap", "Javascript","Node JS","Supabase","PostgreSQL"],
                 images: [
-                    "https://placehold.co/800x500/D4AF37/1a1a1a?text=Dashboard+Overview",
-                    "https://placehold.co/800x500/660000/white?text=Data+Visualization",
-                    "https://placehold.co/800x500/D4AF37/1a1a1a?text=Custom+Reports"
+                    "../img/modulo_innovacion_01.png",
+                    "../img/modulo_innovacion_001.png",
+                    "../img/modulo_innovacion_02.png",
+                    "../img/modulo_innovacion_002.png",
+                    "../img/modulo_innovacion_03.png",
+                    "../img/modulo_innovacion_04.png",
+                    "../img/modulo_innovacion_05.png",
+                    "../img/modulo_innovacion_06.png",
+                    "../img/modulo_innovacion_07.png",
                 ],
-                link: "#"
+                link: "https://modulo-innovacion.onrender.com/"
             },
             3: {
                 title: "Creative Portfolio",
