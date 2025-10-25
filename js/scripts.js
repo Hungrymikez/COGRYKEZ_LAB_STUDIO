@@ -29,18 +29,44 @@
         // });
 
         // Smooth Scrolling
+        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //     anchor.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         const target = document.querySelector(this.getAttribute('href'));
+        //         if (target) {
+        //             window.scrollTo({
+        //                 top: target.offsetTop - 80,
+        //                 behavior: 'smooth'
+        //             });
+        //         }
+        //     });
+        // });
+        // Smooth Scrolling - Versión mejorada
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // Verificar que sea un ancla válido (solo # seguido de caracteres válidos)
+                if (href === '#' || !/^#[A-Za-z][\w:.-]*$/.test(href)) {
+                    return; // Permitir comportamiento normal para # solo o enlaces inválidos
+                }
+                
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
                     window.scrollTo({
                         top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                    
+                    // Actualizar URL sin recargar la página
+                    history.pushState(null, null, href);
                 }
             });
         });
+
+
+
 
         // Active Navigation Link on Scroll
         const sections = document.querySelectorAll('section');
@@ -133,15 +159,19 @@
         // Project Data
         const projects = {
             1: {
-                title: "E-commerce Platform",
-                description: "Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos integrada, panel de administración y sistema de gestión de inventario. Diseñada para pequeñas y medianas empresas que buscan vender en línea.",
-                technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
+                title: "Sistema de Parqueadero",
+                description: "Plataforma de parqueadero con funcionalidades de ingresar vehiculo, salida de vehiculo, y su respectivo historial de vehiculos que han usado el servicio, por el cual se calcula el tiempo y dinero de manera exacta por el servicio de parqueo prestado",
+                technologies: ["Html5", "Css", "Bootstrap", "Javascript","Manejo de API"],
                 images: [
-                    "https://placehold.co/800x500/660000/white?text=E-commerce+Homepage",
-                    "https://placehold.co/800x500/D4AF37/1a1a1a?text=Product+Catalog",
-                    "https://placehold.co/800x500/660000/white?text=Shopping+Cart"
+                    "../img/parqueadero_cogrykez_01.png",
+                    "../img/parqueadero_cogrykez_02.png",
+                    "../img/parqueadero_cogrykez_03.png",
+                    "../img/parqueadero_cogrykez_04.png",
+                    "../img/parqueadero_cogrykez_05.png",
+                    "../img/parqueadero_cogrykez_06.png",
+                    "../img/parqueadero_cogrykez_07.png",
                 ],
-                link: "#"
+                link: "https://hungrymikez.github.io/parqueadero_codema/"
             },
             2: {
                 title: "Analytics Dashboard",
